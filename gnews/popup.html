@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>GNews</title>
+
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Arvo&family=Merriweather:wght@300&family=Roboto:wght@300&display=swap"
+			rel="stylesheet"
+		/>
+
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+			integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+
+		<link rel="stylesheet" href="popup.css" />
+	</head>
+	<body>
+		<main class="frame">
+			<div class="header">
+				<img src="images/logo.png" alt="Image" class="icon" />
+
+				<div class="text">
+					<h1 class="gnews" id="title">GNews</h1>
+					<h1 class="tagline">Access and Compare News Easily</h1>
+				</div>
+			</div>
+
+			<section id="homePage" style="display: block">
+				<div class="home-section">
+					<p class="home-text">
+						Click Generate To get The Keywords and A Short Summary
+						of the Article
+					</p>
+					<div class="home-button" id="summarizeNavigator">
+						Generate
+					</div>
+				</div>
+				<hr class="line" />
+				<div class="home-section">
+					<p class="home-text">
+						Search for News from multiple Issuers. To search for an
+						exact term/phrase, put it in quotation marks (“ “)
+					</p>
+					<div class="home-button" id="searchNavigator">
+						Search News
+					</div>
+				</div>
+			</section>
+
+			<section id="searchPage" style="display: none">
+				<div class="search_container">
+					<div class="search_box">
+						<div class="btn" id="searchBtn">
+							<i class="fas fa-search"></i>
+						</div>
+						<input
+							type="text"
+							class="input"
+							id="searchInput"
+							placeholder="Search..."
+						/>
+					</div>
+				</div>
+
+				<div class="results">
+					<div
+						class="resultBox"
+						id="resultBox1"
+						onclick='openInNewTab("https://news.google.com/articles/CAIiEDuoVdzQbB6prgOgdq3CbU0qGQgEKhAIACoHCAowocv1CjCSptoCMPrTpgU?hl=en-US&gl=US&ceid=US%3Aen")'
+					>
+						<div class="heading" id="heading1">
+							White House thanks interpreter in h...
+						</div>
+						<div class="subheading">
+							<p class="issuer" id="issuer1">CNN</p>
+							<span class="sep"> | </span>
+							<p class="date" id="date1">4 hours ago</p>
+						</div>
+						<img
+							src="https://lh3.googleusercontent.com/proxy/NvoEh8DiJBefPJ1RoZxt6HkC63q7o1cpDh_rKiFKodbtUkJoJc5FcNTi2HW8E-_fbQvpT7DHLdd5kEKCuuRNEkh6yYgbV3o-49fXuQGKodZfQKlZcULDqOw7vGJMpBFSPVg91i6xlTZ6-kCtLo5vL57_gg0ZVKgz0aPiH4eLslknRTHGGn0YE32bGqlQoxiJ8AOZq6UE5kWvL1ofdt9oBvOfHWsovr_-c8452aAT0x4WU4tDMCYz7fhg_Li04lkU70hmYQJkM_c=s0-w100-h100-p-df"
+							class="newsImage"
+							id="newsImage1"
+						/>
+					</div>
+					<div
+						class="resultBox"
+						id="resultBox2"
+						onclick='openInNewTab("https://news.google.com/articles/CAIiEPhbiqp6f7kzzcuhNaNQz4AqGQgEKhAIACoHCAowwL2ICzCckocDMP2lqQY?hl=en-US&gl=US&ceid=US%3Aen")'
+					>
+						<div class="heading" id="heading2">
+							Hurricane Ida damage has left Grand...
+						</div>
+						<div class="subheading">
+							<p class="issuer" id="issuer2">Fox News</p>
+							<span class="sep"> | </span>
+							<p class="date" id="date2">5 hours ago</p>
+						</div>
+						<img
+							src="https://lh3.googleusercontent.com/proxy/bl5WGHyp9RiElkdMgNajSTMTX_KWQUrFt6wpddJNBV7gkVSYVL5iRWRFKmTpEjUlREeJ0SOtFubwzRVggC1abj07wKvcqb-GBOVk0b4mLFA9oJ4ZKyM9xjNEqyfg1sx8zHJ2Exbks1MSqWEqwt1NrAI0neKhbN4s59VOTRJu2bBvN_EDUEq2CreqN01a=s0-w100-h100-p-df"
+							class="newsImage"
+							id="newsImage2"
+						/>
+					</div>
+					<div
+						class="resultBox"
+						id="resultBox3"
+						onclick='openInNewTab("https://news.google.com/articles/CAIiEKiN-Jn0IYAaKa4dBeJ9BJYqGAgEKg8IACoHCAowjtSUCjC30XQwidHlAQ?hl=en-US&gl=US&ceid=US%3Aen")'
+					>
+						<div class="heading" id="heading3">
+							Devastating Caldor Fire continues t...
+						</div>
+						<div class="subheading">
+							<p class="issuer" id="issuer3">
+								The Washington Post
+							</p>
+							<span class="sep"> | </span>
+							<p class="date" id="date3">9 hours ago</p>
+						</div>
+						<img
+							src="https://lh3.googleusercontent.com/proxy/a9S6GY070B1VhbErZZCqQfhI-16YMBwx1WYxQktnbULcHFiWeI3HGo0KJbHos9O8_Sn4840vMNUrrRVufjGzHYqk_vvjU9ZW3xMeit16XrYJabc93BMyqV4A3if_B9n6E0oaMZ9UB7Q0Pr6S-KioTDqHqrHAlH_7x005VIgq2Qa27wJY0ZoNMBe5AalclyG5LQCI4GnOse5XU1VOXufp5gqkIZYd1s-_kBK4Sx5W90SyP7Lm8pEoj56l8Q=s0-w100-h100-p-df"
+							class="newsImage"
+							id="newsImage3"
+						/>
+					</div>
+				</div>
+			</section>
+
+			<section id="keywordsPage" style="display: none">
+				<div class="ks-buttons">
+					<h1 class="your-summary" id="kys">Keywords</h1>
+					<h1 class="your-summary" id="ys">Summary</h1>
+				</div>
+
+				<section id="keywordsPageX">
+					<div class="summary" id="summary">
+						<div class="keywords" id="keywords"></div>
+					</div>
+				</section>
+
+				<section id="summarizePage" style="display: none">
+					<div class="summary" id="summary">
+						<div class="keywords" id="summaryText"></div>
+					</div>
+				</section>
+			</section>
+		</main>
+
+		<script src="popup.js"></script>
+	</body>
+</html>
