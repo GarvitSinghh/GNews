@@ -1,7 +1,7 @@
 {
 	"manifest_version": 3,
 	"name": "GNews",
-	"description": "Interactive News Extension",
+	"description": "Easier To Access News and Summarize and Get Keywords of Articles",
 	"version": "1.0.0",
 	"icons": {
 		"128": "icon_128.png"
